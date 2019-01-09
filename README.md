@@ -4,8 +4,8 @@
 
 其中还包括一份10折交叉验证的代码，最终的运行结果为**76.69% (+/- 2.95%)**。
 
-sklearn结尾的代码为用sklearn包的KerasClassifier进行多分类，通过10折交叉验证，得到最终的精度为**0.7681989076737664**
+sklearn结尾的代码为用sklearn包的`KerasClassifier`进行多分类，通过10折交叉验证，得到最终的精度为**0.7681989076737664**
 
-GridSearch结尾的代码为用sklearn包的GridSearchCV搜索超参，得到最终的结果为**Best: 0.781250 using {'batch_size': 10, 'epochs': 150, 'init': 'normal', 'optimizer': 'rmsprop'}**
+GridSearch结尾的代码为用sklearn包的`GridSearchCV`搜索超参，得到最终的结果为**Best: 0.781250 using {'batch_size': 10, 'epochs': 150, 'init': 'normal', 'optimizer': 'rmsprop'}**
 ### 第二个案例：多分类问题（基于Iris数据集）
 `Iris`数据集为鸢尾花数据集，是一个拥有4个特征的3分类问题，数据集共有150个样本，最终的精度为**Accuracy: 83.33% (0.30)**
