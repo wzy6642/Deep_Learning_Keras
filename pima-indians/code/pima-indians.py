@@ -20,6 +20,7 @@ from keras.models import Sequential
 from keras.layers import Dense
 import numpy as np
 import pandas as pd
+from sklearn import preprocessing
 
 
 # 选用初始化随机数种子，确保输出结果的可重复
@@ -34,6 +35,9 @@ dataset.columns = ['Number of times pregnent', 'Plasma glucose concentration a 2
 train_label = dataset['Class variable(0 or 1)']
 dataset.drop('Class variable(0 or 1)',axis=1, inplace=True)
 train_feature = dataset
+# 数据归一化处理
+min_max_scaler = preprocessing.MinMaxScaler()
+train_feature = min_max_scaler.fit_transform(train_feature)
 del dataset
 # 创建模型
 model = Sequential()
