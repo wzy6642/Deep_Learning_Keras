@@ -66,5 +66,5 @@ kfold = KFold(n_splits=10, shuffle=True, random_state=seed)
 # 注意，这里得出的results是负数，MSE指标要对其取相反数
 results = cross_val_score(pipeline, x, Y, cv=kfold)
 results = -results
-print('Baseline: %.2f (%.2f) MSE' % (results.mean(), results.std()))
+print('Result: %.2f (%.2f) MSE' % (results.mean(), results.std()))
 
