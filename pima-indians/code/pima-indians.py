@@ -47,8 +47,8 @@ model.add(Dense(8, activation='relu'))
 model.add(Dense(1, activation='sigmoid'))
 # 编译模型
 model.compile(loss='binary_crossentropy', optimizer='adam', metrics=['accuracy'])
-# 训练模型
-model.fit(x=train_feature, y=train_label, epochs=150, batch_size=1)
+# 训练模型并自动评估模型
+model.fit(x=train_feature, y=train_label, epochs=150, batch_size=1, validation_split=0.2)
 # 评估模型
 scores = model.evaluate(x=train_feature, y=train_label)
 print('\n%s : %.2f%%' % (model.metrics_names[1], scores[1]*100))
