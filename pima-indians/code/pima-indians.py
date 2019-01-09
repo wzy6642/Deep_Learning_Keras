@@ -21,10 +21,12 @@ from keras.layers import Dense
 import numpy as np
 import pandas as pd
 from sklearn import preprocessing
+from sklearn.model_selection import train_test_split
 
 
 # 选用初始化随机数种子，确保输出结果的可重复
-np.random.seed(4)
+seed = 4
+np.random.seed(seed)
 # 避免第一行变为列名
 dataset = pd.read_csv('../data/pima-indians-diabetes.csv', header=None, names=list(np.arange(9)))
 # 修改列名
@@ -38,6 +40,8 @@ train_feature = dataset
 # 数据归一化处理
 min_max_scaler = preprocessing.MinMaxScaler()
 train_feature = min_max_scaler.fit_transform(train_feature)
+# 将数据集分为train,test
+x_train, x_validation, Y_train, Y_validation = train_test_split(train_feature, train_label, test_size=0.2, random_state=seed)
 del dataset
 # 创建模型
 model = Sequential()
@@ -48,8 +52,8 @@ model.add(Dense(1, activation='sigmoid'))
 # 编译模型
 model.compile(loss='binary_crossentropy', optimizer='adam', metrics=['accuracy'])
 # 训练模型并自动评估模型
-model.fit(x=train_feature, y=train_label, epochs=150, batch_size=1, validation_split=0.2)
+model.fit(x_train, Y_train, validation_data=(x_validation, Y_validation), epochs=150, batch_size=1)
 # 评估模型
-scores = model.evaluate(x=train_feature, y=train_label)
+scores = model.evaluate(x=x_validation, y=Y_validation)
 print('\n%s : %.2f%%' % (model.metrics_names[1], scores[1]*100))
 
