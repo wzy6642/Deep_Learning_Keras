@@ -24,4 +24,4 @@ GridSearch结尾的代码为用sklearn包的`GridSearchCV`搜索超参，得到�
 ### 第九个案例：模型的accuracy/loss可视化（基于Iris数据集）
 通过调用fit返回的`history`绘制网络在train/val上accuracy/loss曲线，以观察模型训练是否收敛。
 ### 第十个案例：在网络中使用Dropout（基于Iris数据集）
-通过在网络中添加`Dropout`层，随机使一部分神经元不参与训练。本代码中首先对输入层添加Dropout层，经过10折交叉验证，最终的结果为：**Accuracy: 74.00% (0.28)**
+通过在网络中添加`Dropout`层，随机使一部分神经元不参与训练。本代码中首先对输入层添加Dropout层，然后对隐层以及输出层添加Dropout层，经过10折交叉验证，最终的结果分别为：**Accuracy: 74.00% (0.28)/Accuracy: 65.33% (0.29)**
