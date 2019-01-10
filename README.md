@@ -21,3 +21,5 @@ GridSearch结尾的代码为用sklearn包的`GridSearchCV`搜索超参，得到�
 本代码将val上的accuracy提升时候的模型的权重进行保存(不覆盖前一次的保存结果)。用到了Keras的`ModelCheckpoint`。最后一次的保存结果为：**Epoch 00177: val_acc improved from 0.80000 to 0.83333, saving model to ../model/weights-improvement-177-0.83.h5**
 ### 第八个案例：保存最好的模型并计算该模型的得分（基于Iris数据集）
 本代码中将val上accuracy表现最好的模型的权重进行保存，并将该权重导入用于计算此时的all_accuracy。最终得分为：**acc: 96.00%**
+### 第九个案例：模型的accuracy/loss可视化（基于Iris数据集）
+通过调用fit返回的`history`绘制网络在train/val上accuracy/loss曲线，以观察模型训练是否收敛。
