@@ -14,4 +14,4 @@ GridSearch结尾的代码为用sklearn包的`GridSearchCV`搜索超参，得到�
 ### 第四个案例：二分类问题（基于Banking Marking数据集）
 本案例中使用`replace`对数据集中的英文进行了编码处理，这是这份代码的一个亮点！对数据作`StandardScaler()`处理，使用`GridSearchCV`搜索超参。最终结果为：**Accuracy: 88.92% (0.01)  Best: 0.886308 using {'units_list': [16]}**
 ### 第五个案例：神经网络模型的保存与加载（基于Iris数据集）
-使用`model.to_json()`保存网络结构，使用`model.save_weights()`保存权重。使用`model_from_json(model_json)`加载已经保存好的模型。**通过加载模型的方式建立新的模型后，必须先编译模型，后对新的数据集进行预测。**最终结果为**acc: 99.33%**
+使用`model.to_json()`保存网络结构，使用`model.save_weights()`保存权重。使用`model_from_json(model_json)`加载已经保存好的模型。另一份代码采用YAML格式对模型进行保存与加载。**通过加载模型的方式建立新的模型后，必须先编译模型，后对新的数据集进行预测。**最终结果为**acc: 99.33%**
