@@ -18,4 +18,4 @@ GridSearch结尾的代码为用sklearn包的`GridSearchCV`搜索超参，得到�
 ### 第六个案例：模型的增量更新（基于Iris数据集）
 先用构建好的模型对部分数据进行训练，并将网络的结构以及权重进行保存。然后将保存的网络加载并对剩余的样本进行`增量训练`。相比于全量更新，这样可以大大缩短训练时间。最终结果为：**Base acc: 98.33%\Increment acc: 96.67%**
 ### 第七个案例：保存检查点（基于Iris数据集）
-本代码将val上的accuracy提升时候的模型的权重进行保存(不覆盖前一次的保存结果)。用到了Keras的`ModelCheckpoint`。最后一次的保存结果为：**Epoch 00200: val_acc did not improve from 0.83333**
+本代码将val上的accuracy提升时候的模型的权重进行保存(不覆盖前一次的保存结果)。用到了Keras的`ModelCheckpoint`。最后一次的保存结果为：**Epoch 00177: val_acc improved from 0.80000 to 0.83333, saving model to ../model/weights-improvement-177-0.83.h5**
