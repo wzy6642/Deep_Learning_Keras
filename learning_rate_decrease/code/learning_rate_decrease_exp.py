@@ -44,6 +44,12 @@ def create_model(init='glorot_uniform'):
     return model
 
 
+"""
+keras.callbacks.LearningRateScheduler(schedule) 
+该回调函数是用于动态设置学习率 
+参数： 
+● schedule：函数，该函数以epoch号为参数（从0算起的整数），返回一个新学习率（浮点数）
+"""
 lrate = LearningRateScheduler(step_decay)
 model = KerasClassifier(build_fn=create_model, epochs=200, batch_size=5, verbose=1, callbacks=[lrate])
 model.fit(x, Y)
