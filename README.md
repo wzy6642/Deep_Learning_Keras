@@ -17,3 +17,5 @@ GridSearch结尾的代码为用sklearn包的`GridSearchCV`搜索超参，得到�
 使用`model.to_json()`保存网络结构，使用`model.save_weights()`保存权重。使用`model_from_json(model_json)`加载已经保存好的模型。另一份代码采用YAML格式对模型进行保存与加载。**通过加载模型的方式建立新的模型后，必须先编译模型，后对新的数据集进行预测。**最终结果为**acc: 99.33%**
 ### 第六个案例：模型的增量更新（基于Iris数据集）
 先用构建好的模型对部分数据进行训练，并将网络的结构以及权重进行保存。然后将保存的网络加载并对剩余的样本进行`增量训练`。相比于全量更新，这样可以大大缩短训练时间。最终结果为：**Base acc: 98.33%\Increment acc: 96.67%**
+### 第七个案例：保存检查点（基于Iris数据集）
+本代码将val上的accuracy提升时候的模型的权重进行保存(不覆盖前一次的保存结果)。用到了Keras的`ModelCheckpoint`。最后一次的保存结果为：**Epoch 00200: val_acc did not improve from 0.83333**
