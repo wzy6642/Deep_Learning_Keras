@@ -10,4 +10,4 @@ GridSearch结尾的代码为用sklearn包的`GridSearchCV`搜索超参，得到�
 ### 第二个案例：多分类问题（基于Iris数据集）
 `Iris`数据集为鸢尾花数据集，是一个拥有4个特征的3分类问题，数据集共有150个样本，最终的精度为**Accuracy: 83.33% (0.30)**
 ### 第三个案例：回归问题（基于Boston House Price数据集）
-`Boston House Price`数据集为1978年波士顿房价的统计数据，共计14个特征，506个样本。最终的精度为**MSE: 12.36 (4.37)**。__注意：cross_val_score函数当loss函数为mean_squared_error时，其得分为负数，所以最终的MSE指标要在交叉验证的结果上取相反数！__
+`Boston House Price`数据集为1978年波士顿房价的统计数据，共计14个特征，506个样本。最终的精度为**MSE: 12.36 (4.37)**。__注意：cross_val_score函数当loss函数为mean_squared_error时，其得分为负数(cross_val_score里用的指标是负均方误差)，所以最终的MSE指标要在交叉验证的结果上取相反数！__
