@@ -31,3 +31,5 @@ GridSearch结尾的代码为用sklearn包的`GridSearchCV`搜索超参，得到�
 `mnist`数据集拥有60000个样本，每张图片均为28x28。在本案例中首先采用传统的多层感知器构建手写体识别的模型，其原理是把每一张图片看成一个向量，其label为图片代表的数字，通过构造神经网络学习feature与label之间的映射关系。其精度为`MLP: 98.09%`;使用卷积神经网络：输入层->卷积层->池化层->Dropout层->Flatten层->全连接层->输出层。最终的分类精度为：**CNN_Small: 99.07%。**
 
 <div align=center><img width="400" height="600" src="https://github.com/wzy6642/Deep_Learning_Keras/blob/master/CNN_mnist/code/Flatten.png" alt="CNN结构图"/></div>
+### 第十三个案例：图像增强（基于mnist数据集）
+本代码中利用`ImageDataGenerator`对图像进行特征标准化、ZCA白化、旋转、移动、反转、透视操作，并且介绍了文件路径的创建(try:/except:)以及图像的自动保存。
