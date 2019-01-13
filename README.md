@@ -37,6 +37,6 @@ GridSearch结尾的代码为用sklearn包的`GridSearchCV`搜索超参，得到�
 ### 第十四个案例：复杂CNN的应用（基于CIFAR-10数据集）
 `CIFAR-10`中包含了60000张图片用于10分类任务。本代码中设计了大型卷积神经网络用于多分类任务。利用`model.summary()`对模型结构进行输出，`TensorBoard`记录计算过程中的训练信息，`LearningRateScheduler`动态调整学习率，`GlobalAveragePooling2D`进行平均池化处理，将每一个feature map变为一个特征点。最终的分类精度为：**0.8796**
 ### 第十五个案例：影评情感分类（基于IMDB数据集）
-`IMDB`数据集包括50000部电影的评价信息，label为黑白样本。使用`Embedding`结合一维卷积池化可以达到_0.8865_的精度。参考链接：https://github.com/MoyanZitto/keras-cn/blob/master/docs/legacy/blog/word_embedding.md
+`IMDB`数据集包括50000部电影的评价信息，label为黑白样本。使用`Embedding`结合一维卷积池化可以达到0.8865的精度。参考链接：https://github.com/MoyanZitto/keras-cn/blob/master/docs/legacy/blog/word_embedding.md
 ### 第十六个案例：时间序列分析（基于AirlinePassengers数据集）
 `AirlinePassengers数据集`记录了1949~1960年的国际旅客人数数据集，通过构造t-3与t之间的时间序列，利用多层感知机进行预测，最终结果为：_Train Score: 456.09 MSE (21.36 RMSE)/Validation Score: 2021.68 MSE (44.96 RMSE)。_
