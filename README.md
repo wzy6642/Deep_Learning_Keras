@@ -34,3 +34,5 @@ GridSearch结尾的代码为用sklearn包的`GridSearchCV`搜索超参，得到�
 
 ### 第十三个案例：图像增强（基于mnist数据集）
 本代码中利用`ImageDataGenerator`对图像进行特征标准化、ZCA白化、旋转、移动、反转、透视操作，并且介绍了文件路径的创建(try:/except:)以及图像的自动保存。
+### 第十四个案例：复杂CNN的应用（基于CIFAR-10数据集）
+`CIFAR-10`中包含了60000张图片用于10分类任务。本代码中设计了大型卷积神经网络用于多分类任务。利用`model.summary()`对模型结构进行输出，`TensorBoard`记录计算过程中的训练信息，`LearningRateScheduler`动态调整学习率，`GlobalAveragePooling2D`进行平均池化处理，将每一个feature map变为一个特征点。最终的分类精度为：**0.8796**
