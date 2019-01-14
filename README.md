@@ -41,4 +41,4 @@ GridSearch结尾的代码为用sklearn包的`GridSearchCV`搜索超参，得到�
 ### 第十六个案例：时间序列分析（基于AirlinePassengers数据集）
 `AirlinePassengers数据集`记录了1949-1960年的国际旅客人数数据集，通过构造t-3~t与t+1之间的时间序列，利用多层感知机进行预测，最终结果为：_Train Score: 456.09 MSE (21.36 RMSE)/Validation Score: 2021.68 MSE (44.96 RMSE)。_另外，通过`LSTM`的批次间记忆，构造神经网络模型，对数据集进行预测。最终结果为：_Train Score: 30.70 MSE/Validation Score: 105.41 MSE。_
 ### 第十七个案例：多变量时间序列分析（基于PRSA数据集）
-`PRSA`数据集记录了北京五年内每天的PM2.5指数以及当天的温度、风速等情况，通过建立t-1日的各项指标与t日的PM2.5指数，构造多变量的时间序列。利用LTSM进行预测，预测结果为：val_loss: 53.3895
+`PRSA`数据集记录了北京五年内每天的PM2.5指数以及当天的温度、风速等情况，通过建立t-1日的各项指标与t日的PM2.5指数，构造多变量的时间序列。利用LTSM进行预测，预测结果为：val_loss: 53.3895。本代码亮点在于时间数据的处理`parse_dates`以及训练数据集的合成`shift`
