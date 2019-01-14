@@ -40,3 +40,5 @@ GridSearch结尾的代码为用sklearn包的`GridSearchCV`搜索超参，得到�
 `IMDB`数据集包括50000部电影的评价信息，label为黑白样本。使用`Embedding`结合一维卷积池化可以达到0.8865的精度。参考链接：https://github.com/MoyanZitto/keras-cn/blob/master/docs/legacy/blog/word_embedding.md 使用LTSM+一维卷积+一维池化可以达到Accuracy: 87.54%
 ### 第十六个案例：时间序列分析（基于AirlinePassengers数据集）
 `AirlinePassengers数据集`记录了1949-1960年的国际旅客人数数据集，通过构造t-3~t与t+1之间的时间序列，利用多层感知机进行预测，最终结果为：_Train Score: 456.09 MSE (21.36 RMSE)/Validation Score: 2021.68 MSE (44.96 RMSE)。_另外，通过`LSTM`的批次间记忆，构造神经网络模型，对数据集进行预测。最终结果为：_Train Score: 30.70 MSE/Validation Score: 105.41 MSE。_
+### 第十七个案例：多变量时间序列分析（基于PRSA数据集）
+`PRSA`数据集记录了北京五年内每天的PM2.5指数以及当天的温度、风速等情况，通过建立t-1日的各项指标与t日的PM2.5指数，构造多变量的时间序列。利用LTSM进行预测，预测结果为：val_loss: 53.3895
