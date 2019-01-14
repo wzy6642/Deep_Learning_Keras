@@ -39,4 +39,4 @@ GridSearch结尾的代码为用sklearn包的`GridSearchCV`搜索超参，得到�
 ### 第十五个案例：影评情感分类（基于IMDB数据集）
 `IMDB`数据集包括50000部电影的评价信息，label为黑白样本。使用`Embedding`结合一维卷积池化可以达到0.8865的精度。参考链接：https://github.com/MoyanZitto/keras-cn/blob/master/docs/legacy/blog/word_embedding.md
 ### 第十六个案例：时间序列分析（基于AirlinePassengers数据集）
-`AirlinePassengers数据集`记录了1949~1960年的国际旅客人数数据集，通过构造t-3与t之间的时间序列，利用多层感知机进行预测，最终结果为：_Train Score: 456.09 MSE (21.36 RMSE)/Validation Score: 2021.68 MSE (44.96 RMSE)。_
+`AirlinePassengers数据集`记录了1949~1960年的国际旅客人数数据集，通过构造t-3~t与t+1之间的时间序列，利用多层感知机进行预测，最终结果为：_Train Score: 456.09 MSE (21.36 RMSE)/Validation Score: 2021.68 MSE (44.96 RMSE)。_另外，通过`LSTM`的批次间记忆，构造神经网络模型，对数据集进行预测。最终结果为：_Train Score: 30.70 MSE/Validation Score: 105.41 MSE。_
